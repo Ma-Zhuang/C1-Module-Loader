@@ -230,9 +230,13 @@ int main() {
 			low_poly_boat.draw(myShader);
 			break;
 		case 5:
+			glUniformMatrix4fv(glGetUniformLocation(myShader->ProgramID, "modelMat"), 1, GL_FALSE, glm::value_ptr(glm::translate(modelMat, glm::vec3(2.0f, 0.0f, 0.0f))));
 			Creeper.draw(myShader);
+			glUniformMatrix4fv(glGetUniformLocation(myShader->ProgramID, "modelMat"), 1, GL_FALSE, glm::value_ptr(glm::translate(modelMat, glm::vec3(0.0f, 0.0f, 0.0f))));
 			pouf.draw(myShader);
+			glUniformMatrix4fv(glGetUniformLocation(myShader->ProgramID, "modelMat"), 1, GL_FALSE, glm::value_ptr(glm::translate(modelMat, glm::vec3(6.0f, 0.0f, 0.0f))));
 			nanosuit.draw(myShader);
+			glUniformMatrix4fv(glGetUniformLocation(myShader->ProgramID, "modelMat"), 1, GL_FALSE, glm::value_ptr(glm::translate(modelMat, glm::vec3(150.0f, 0.0f, 0.0f))));
 			low_poly_boat.draw(myShader);
 			break;
 		case 9:
